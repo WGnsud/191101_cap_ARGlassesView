@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/Refrash"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:adjustViewBounds="true"
+                    android:foregroundGravity="bottom"
+                    android:onClick="Refrash"
+                    android:scaleType="fitCenter"
+                    android:text="새로고침"
+                    app:srcCompat="@drawable/refresh" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <ImageButton
+                    android:id="@+id/btnConnect"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:adjustViewBounds="true"
+                    android:onClick="btnConnect"
+                    android:scaleType="fitCenter"
+                    android:text="연결"
+                    app:srcCompat="@drawable/bluetooth" />
+
+                <ImageButton
+                    android:id="@+id/kill"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:adjustViewBounds="true"
+                    android:onClick="kill"
+                    android:scaleType="fitCenter"
+                    android:text="쓰레드 종료"
+                    app:srcCompat="@drawable/power" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="AR Glasses"
+                android:textColor="@color/color_black"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="시간 : "
+                android:textColor="@color/color_black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bt_time_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="show_time"
+                android:text="      :      :      "
+                android:textColor="@color/color_black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="           " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Today : "
+                android:textColor="@color/color_black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/step_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-condensed"
+                android:text="                  "
+                android:textColor="@color/color_black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/goto_Map"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:adjustViewBounds="true"
+                    android:onClick="goto_Map"
+                    android:scaleType="fitCenter"
+                    android:background="@color/color_gray"
+                    app:srcCompat="@drawable/map" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "/>
+                <ImageButton
+                    android:id="@+id/goto_Bus"
+                    android:background="@color/color_gray"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:adjustViewBounds="true"
+                    android:onClick="goto_Bus"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/bus" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   "/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/recognizer_button"
+                    android:background="@color/color_gray"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:adjustViewBounds="true"
+                    android:onClick="Recognizer"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/mic" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" "/>
+                <ImageButton
+                    android:background="@color/color_gray"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:adjustViewBounds="true"
+                    android:onClick="goto_Step"
+                    android:scaleType="fitCenter"
+                    android:text="걸음수"
+                    app:srcCompat="@drawable/step" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="    " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      " />
+
+            <Switch
+                android:id="@+id/time_Choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:fontFamily="sans-serif-condensed"
+                android:text="시간/자동갱신"
+                android:textColor="@color/color_black"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="57dp" />
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/Recognizer_text"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="음성인식 결과 표시" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="128dp"
+            android:layout_height="64dp"
+            android:layout_gravity="end"
+            android:background="@color/color_black"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/led_view1"
+                android:layout_width="128dp"
+                android:layout_height="21dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/led_view2"
+                android:layout_width="128dp"
+                android:layout_height="21dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/led_view3"
+                android:layout_width="128dp"
+                android:layout_height="21dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

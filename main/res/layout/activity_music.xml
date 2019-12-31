@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="MediaPlayer 활용"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="55dp"
+        android:onClick="mOnclick"
+        android:text="시작"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bStart"
+        android:layout_alignLeft="@+id/bStart"
+        android:layout_marginTop="9dp"
+        android:onClick="mOnclick"
+        android:text="일시정지"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bStart" />
+
+    <Button
+        android:id="@+id/bRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bPause"
+        android:layout_alignLeft="@+id/bPause"
+        android:onClick="mOnclick"
+        android:text="재시작"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/bPause"
+        app:layout_constraintTop_toBottomOf="@+id/bPause" />
+
+    <Button
+        android:id="@+id/bStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bRestart"
+        android:layout_alignLeft="@+id/bRestart"
+        android:onClick="mOnclick"
+        android:text="종료"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/bRestart"
+        app:layout_constraintTop_toBottomOf="@+id/bRestart" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bStop"
+        android:layout_alignLeft="@+id/bStop"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bStop"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/bBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="40dp"
+        android:onClick="mOnclick"
+        android:text="이전"
+        app:layout_constraintStart_toEndOf="@+id/bStart"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <Button
+        android:id="@+id/bAfter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="44dp"
+        android:onClick="mOnclick"
+        android:text="다음"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bBefore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bBefore" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="377dp">
+
+        <Button
+            android:id="@+id/vol_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mOnclick"
+            android:text="up"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <Button
+            android:id="@+id/vol_toggle_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mOnclick"
+            android:text="t_mute"
+
+            tools:layout_editor_absoluteX="261dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <Button
+            android:id="@+id/vol_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="mOnclick"
+            android:text="down"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
